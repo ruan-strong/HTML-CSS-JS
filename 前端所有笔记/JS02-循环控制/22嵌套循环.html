@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 嵌套for循环
+			 
+			 * 
+			 * */
+			/*	break关键字
+			 *	语法:break;
+			 * 		break关键字作为 循环体 默认会直接终止离他最近的循环语句
+			 * 
+			 * */
+			
+			/*
+			 
+			 * 	continue关键字
+			 * 
+			 * 	语法: continue;
+			 * 			可以用来跳过档次循环。进行下一次循环
+			 * 
+			 * */
+			
+			
+			/*
+			 
+			 * 我们可以为循环创建一个名字，来表示当前循环
+			 * 
+			 * 	语法   name:循环语句
+			 * 	可以在 break后跟一个name ，这样break会结束指定循环
+			 * */
+			hello:for (var i = 0; i < 3; i++) {
+				document.write("菜单"+(i+1)+"<br/>");
+//				continue;
+//				break;
+				for (var j = 0; j < 5; j++) {
+					if(j==2){
+							continue;
+					}
+					document.write("&ensp;内容"+(j+1)+"<br/>");
+				
+					break hello;
+				}
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 
+			 * 1、开发一款软件，根据公式（身高-108）*2=体重，可以有10斤左右的浮动。来观察测试者
+			 * */
+			/*//身高
+			var height = +prompt("请输入身高:");
+			//体重
+			var weight = +prompt("请输入体重");
+			//标准体重
+			var standard = (height-108)*2;
+			
+			if(weight>=standard-10&&weight<=standard+10){
+				alert("宁的标准体重为："+standard+",恭喜宁正常");
+			}else if(weight<standard-10){
+				alert("宁的标准体重为："+standard+",宁变瘦");
+			}else if(weight>standard+10){
+				alert("宁的标准体重为："+standard+",宁偏胖");
+			}*/
+			
+			/*
+			 
+			 * 2、输入分数，判定成绩等级(switch写法) 
+
+				  大于90 alert("你的成绩等级为优秀");
+				
+				  大于60到80 alert("你的成绩等级为良好");
+				 
+				  小于60 alert("你的成绩等级为不及格，继续加油哦！");
+			 * */
+			/*var score = +prompt("请输入分数");
+			switch (true){
+				case score>=90:
+						alert("你的成绩等级为优秀");
+					break;
+				case score>=60 && score<=89:
+						alert("你的成绩等级为良好");
+					break;
+				case score<=59:
+						alert("你的成绩等级为不及格，继续加油哦！");
+					break;	
+				default:
+					break;
+			}*/
+			/*3
+			 * 
+			 * 、输入月份，显示当月的天数 注意：平年闰年
+			 
+			 * */
+			//月份
+			/*var month = +prompt("请输入月份:");
+			var year = +prompt("请输入年份:");
+
+			switch (month){
+				case 1:
+				case 3:
+				case 5:
+				case 7:
+				case 8:
+				case 10:
+				case 12:
+					alert("该月份为31天");
+					break;
+				case 4:
+				case 6:
+				case 9:
+				case 11:
+					alert("该月份为30天");
+					break;
+				case 2:
+					if(year%4==0&&year%100!=0 || year%400==0){
+						alert("该月份为29天");
+					}else{
+						alert("该月份为28天");
+					}
+					break;
+				default:
+						alert("请输入正确的月份");
+					break;
+			}*/
+			/*
+			 
+			 * 
+				4、根据日期，判断这个日期是这一年的第几天。 (使用switch编写)例如： 20160211，计算后结果为42
+			 * 
+			 * */
+			var dateStr = +prompt("请输入八位的日期");
+			//拆分日期
+			var days = dateStr%100;
+			//拆分月份
+			var months = parseInt(dateStr/100)%100;
+			//拆分年份
+			var year = parseInt(dateStr/10000);
+			switch (months){
+				case 12:
+					days+=31;
+				case 11:
+					days+=30;
+				case 10:
+					days+=31;
+				case 9:
+					days+=30;
+				case 8:
+					days+=31;
+				case 7:
+					days+=31;
+				case 6:
+					days+=30;
+				case 5:
+					days+=31;
+				case 4:
+					days+=30;
+				case 3:
+					days+=31;
+				case 2:
+					year%4==0&&year%100!=0 || year%400==0 ? days+=29:days+=28;//三元表达式
+				case 1:
+					days+=31;
+					break;
+				default:
+				alert("请输入正确的日期");
+					break;
+			}
+			alert("宁输入的日期是:"+year+"年的第"+days+"天");
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

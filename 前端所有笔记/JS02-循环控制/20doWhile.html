@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*do..while
+			 
+			 *  语法:
+			 * 		do{
+			 * 			循环体;
+			 * 		}while(条件表达式);
+			 * 
+			 * 		执行流程:
+			 * 			先执行循环体,执行完之后再判断条件表达式
+			 * 			条件表达式为true则再执行循环体
+			 * 			
+			 *		 特点:至少会执行一次循环体
+			 * 	
+			 * 
+			 * 
+			 * */
+			do{
+				alert("我弹出来了！");
+			}while(false)
+			
+			
+			var num = 1;//初始化变量
+			var sum = 0;
+			do{
+				sum+=num;
+				num++;//更新表达式
+			}while(num<=100)//条件表达式
+			alert(sum);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

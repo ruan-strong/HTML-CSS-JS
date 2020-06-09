@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*数组字面量
+			 
+			 * 		使用字面量创建一个数组时,可以在创建时就指定元素
+			 * 
+			 * 	语法:  var 数组名 = [字面量,字面量];
+			 * 
+			 * 使用构造函数
+			 *
+			 * 	语法: var 数组名 = new Array(字面量,字面量);
+			 * 
+			 * 数组中可以放任意类型的元素
+			 * 
+			 * 
+			 * */
+			//创建一个对象
+			var obj={name:"孙悟空",age:500,sex:"男"};
+			
+			//字面量的形式创建一个数组
+			var arr = ["张三",18,false,obj,function(){alert("你好！！")}];
+//			console.log(arr[4]);
+			arr[4]();
+			console.log(arr[3].name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

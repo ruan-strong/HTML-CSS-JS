@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+		<script type="text/javascript">
+			/*让创建好的DIV每秒换一种颜色
+			 
+			 * 	var color = ~~(Math.random()*(0xffffff+1));
+				var colotStr = "#"+color.toString(16);//随机颜色
+							
+				var div1 = document.getElementById("box1");//通过它找到div1
+				
+				给div赋予样式语法
+				
+				对象.style.样式名 = colotStr
+			 * 
+			 * */
+			function fun(){
+				var color = ~~(Math.random()*(0xffffff+1));
+				var colotStr = "#"+color.toString(16);//随机颜色
+				var box = document.getElementById("box1");//根据id获取div元素
+				box.style.backgroundColor=colotStr;
+				
+			}
+			setInterval("fun();",100);
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			
+		</div>
+	</body>
+</html>

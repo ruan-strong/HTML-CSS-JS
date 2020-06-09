@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(){
+				history.forward();
+			}
+			function fun2(){
+				//相当于forward
+				history.go(1);
+				//相当于刷新页面
+//				history.go(0);
+				//相当于back
+//				history.go(-1);
+				//相当于退回到前两个画面
+//				history.go(-2);
+			}
+		</script>
+	</head>
+	<body>
+		<a href="histroy案例页面.html">点击进入画面</a>
+		<button onclick="fun()">点击前进</button>
+		
+		<button onclick="fun2()">GO</button>
+	</body>
+</html>

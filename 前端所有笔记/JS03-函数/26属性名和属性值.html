@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj = new Object();
+			/*向对象中添加属性
+			 
+			 * 	属性名：
+			 * 		-对象的属性名不强制要求遵守标识符规范
+			 * 			任何名字都可以使用
+			 * 		
+			 * 
+			 * */
+			obj.name="孙悟空";
+//			obj.!@#$%=18;
+
+			/*如果要使用特殊符号的属性名，不能采用 ‘.’的方式来操作
+			 
+			 * 语法:   对象["属性名"] = 值;
+			 * 
+			 * 
+			 * */
+			obj["!@#$%^"]=500;
+			obj["sex"]="男";
+			console.log(obj);
+			
+			
+			/*属性值
+			 
+			 * 		JS对象的对象值，可以是任意类型
+			 * 
+			 * */
+			obj.test=true;
+			obj.test1=null;
+			obj.test2=undefined;
+		
+			
+			var obj2 = new Object();
+			obj2.name="猪八戒";
+			obj.test3=obj2;
+			obj.test4=function(){
+				alert("11111");
+			}
+//			obj.test4();
+			console.log(obj);
+			
+			/*in 运算符
+			 
+			 *	-通过该运算符可以检查一个对象中是否包含指定属性
+			 * 		有返回值:  true 和 false
+			 * 	语法：  "属性名" in 对象	
+			 * 
+			 * */
+			console.log("test4" in obj);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

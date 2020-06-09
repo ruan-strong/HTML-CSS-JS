@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*获取焦点的元素*/
+			#inp1:focus{
+				background-color: orange;
+			}
+			/*元素之前*/
+			#p1:before{
+				content: "大家好:";
+				background-color: aqua;
+			}
+			/*元素之后*/
+			#p1:after{
+				content: ",我是某某某";
+				color: red;
+			}
+			/*选中的元素*/
+			.cls1::selection{
+				background-color: aquamarine;
+				color: red;
+			}
+			#p2{
+				font-size: 30px;	
+			}
+			/*首字母*/
+			#p2:first-letter{
+				font-size: 200px;
+			}
+			/*首行*/
+			#p2:first-line{
+				background-color: aquamarine;
+			}
+		</style>
+	</head>
+	<body>
+		用户名:<input type="text" name="" id="inp1" value="" />
+		
+		<p id="p1">我是</p>
+		<p class="cls1">我是段落标签</p>
+		
+		<p id="p2">我是张三！我是张三！我是张三！我是张三！<br/>我是张三！我是张三！我是张三！</p>
+	</body>
+</html>

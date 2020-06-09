@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*关系运算符
+			 
+			 * 可以比较两个值之间的大小关系
+			 * 		>	<	>=	<=
+			 * 	
+			 * 
+			 * */
+			/*对非数值的数字进行比较时，会先将其转换为数值然后再比较*/
+			console.log("1"<"2");
+			/*任何值和NaN做比较时，都返回false*/
+			
+			
+			/*如果两边都是字符串，则不会转为数字比较,而是比较字符串的Unicode编码*/
+			//&#21834;   &#38463;
+			console.log("啊">"阿");
+			
+			/*相等运算符
+			 
+			 *  ==  !=
+			 * 	值类型不同 会自动进行值类型转换
+			 * 	将其转换为相同类型然后再比较
+			 * 	会将字符串和布尔值都转为number
+			 * 
+			 * */
+			console.log(true==1);
+			
+//			console.log("a"==1);
+
+			console.log(null==1);//false
+			
+			console.log(null==undefined);//true
+			
+			/*全等于
+			 
+			 * 		===
+			 * 
+			 * 		和==类似,不同的是他不会自动类型转换
+			 * 		如果两个值类型不同则会返回false
+			 * */
+			
+			console.log("1"==1);
+			console.log("1"===1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

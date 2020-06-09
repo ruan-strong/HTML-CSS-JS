@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//输出函数
+			alert("你好，今天天气很好");
+			
+			//输入函数
+			/*
+			 
+			 * 	prompt(提示内容,默认数值值);
+			 *	 返回值：输入的值(返回值为string类型)
+			 * 		当我们想得到number类型的返回值时,去要在函数钱加  "+"  
+			 * 
+			 * 
+			 * 	confirm(提示内容)
+			 * 	返回值: false|true
+			 * 	
+			 * */
+			var str = prompt("请输入宁要输出的内容");
+			
+			var age = +prompt("请输入年龄：");
+			console.log(str);
+			console.log(typeof str);
+			console.log(age);
+			console.log(typeof age);
+			
+			var flag = confirm("宁确定吗？");
+			console.log(flag);
+			console.log(typeof flag);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

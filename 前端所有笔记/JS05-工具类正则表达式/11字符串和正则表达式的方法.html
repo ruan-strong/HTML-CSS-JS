@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*split
+			 
+			 * 	可以将字符串拆分成一个数组
+			 *		参数:需要一个字符串作为参数,还可以传递一个正则表达式作为参数,将会根据该字符串去拆分数组
+			 * 		如果传递一个空串作为参数，则会讲每个字符都拆分为数组中的一个元素
+			 *  
+			 * */
+			var str = "1a2b3c4d5f6g7";
+			//根据任意字符将字符串拆分
+			var reg =/[A-z]/;
+			
+			var result = str.split(reg);
+			console.log(result);
+			
+			/*search()
+			 
+			 * 	-可以搜索字符串中是否有指定内容
+			 * 	 如果搜索到指定内同则会返回第一次出现的索引,如果没有搜索到则返回-1
+			 * 	它可以接受一个正则表达式作为参数，返回根据正则表达式去检索字符串
+			 * 
+			 * 	
+			 * */
+			str = "hello abc hello aec afc";
+			//检查一个字符串中是否含有 abc aec afc
+			var result1 = str.search(/a[bef]c/);
+			console.log(result1)
+			
+			/*match()
+			 
+			 * 	可以根据正则表达式从一个字符串中讲符合条件的内同提取出来
+			 * 	默认情况下智慧检查第一个符合条件的内同,找到后就会停止搜索
+			 * 	我们可以设置正则表达式的全局模式。这样就可以匹配到所有内容
+			 * 			-可以将正则表达式设置多个匹配模式，且顺序无所谓
+			 * 
+			 * */
+			str = "0a1b2c3d4e5f6g7";
+			var result2 = str.match(/[a-z]/ig);
+			console.log(result2);
+			/*replace()
+			 
+			 *  可以将字符串中指定的内同替换成新的内容
+			 * 
+			 * 	参数：
+			 * 		1.被替换的内同,可以接受一个正则表达式
+			 * 		2.新的内容
+			 * 		默认只会替换一个
+			 * */
+			str = "1a2b3c";
+			var result3= str.replace(/[a-z]/ig,"");
+			console.log(result3);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

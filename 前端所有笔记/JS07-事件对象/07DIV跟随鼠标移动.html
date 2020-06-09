@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 200px;
+				height: 200px;
+				background-color: aqua;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				//box元素
+				var box = document.getElementById("box");
+					box.onmousedown=function(event){
+						//兼容
+						event = event||window.event;
+						var ol = event.clientX-box.offsetLeft;
+						var ot = event.clientY-box.offsetTop;
+						document.onmousemove = function(event){
+								var x = event.clientX;//横轴
+								var y =event.clientY;//纵轴
+//								console.log(event.clientX);//横轴
+//								console.log(event.clientY);//纵轴
+//								console.log(box.offsetLeft);//当前left值
+//								console.log(box.offsetTop);//当前top值
+								var left = x-ol;
+								var top = y-ot;
+								box.style.top = top +"px";
+								box.style.left= left+"px";
+							}
+						}
+					box.onmouseup=function(){
+						document.onmousemove=null;
+					}
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			
+		</div>
+	</body>
+</html>

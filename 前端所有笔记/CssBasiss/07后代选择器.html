@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*后代选择器*/
+			#box1 p{
+				color: red;
+			}
+			/*子代选择器*/
+			#box1>p{
+				color: yellowgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<strong>
+				<p>后代元素</p>
+			</strong>
+			<p class="cls1">子元素</p>
+			<p>子元素</p>
+		</div>
+	</body>
+</html>

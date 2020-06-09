@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/*[title]：选择定义titel属性的元素，忽略属性值；*/
+			a[title]{
+				color: red;
+			}
+			/*[title="val"]：选择定义title属性，且属性值为val的元素；*/
+			a[title="atitle1"]{
+				color: green;
+			}
+			/*[title^="val"]：选择定义title属性，且属性值以字符串val开头的元素；*/
+			a[title^="bt"]{
+				color: orange;
+			}
+			/*[title$="val"]：选择定义title属性，且属性值以字符串val结尾的元素；*/
+			a[title$="1"]{
+				font-size: 30px;
+			}
+			/*[title*="val"]：选择定义title属性，且属性值包含字符串val的元素；*/
+			a[title*="at"]{
+				font-family: "楷体";
+			}
+			/*[title~="val"]：选择定义title属性，且属性值具有多个值，其中一个为字符串val的元素。*/
+			a[class~="cls1"]{
+				color: aqua;
+			}
+			/*[title|="val"]：选择定义title属性，且属性值为连字符分割的多个值，其中第一个为字符串val的元素；*/
+			a[title|="til"]{
+				color: blue;
+			}
+			a[href*="01"]{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<a href="01内联引入.html" title="atitle">属性选择器</a>
+		<a href="01内联引入.html" title="atitle1">属性选择器</a>
+		<a href="01内联引入.html" title="atitle2">属性选择器</a>
+		<a href="01内联引入.html" title="btitle3">属性选择器</a>
+		<a href="01内联引入.html" title="btitle3" class="cls1 cls2">属性选择器</a>
+		<a href="01内联引入.html" title="til-itle">属性选择器</a>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*原型  prototype
+			 
+			 *	 我们每创建一个函数,浏览器都会向函数中添加一个属性 prototype
+			 * 	这个属性也对应着一个对象，这个对象就是我们所谓的原型对象
+			 * 
+			 * 	如果函数作为普通函数调用prototype没有任何作用
+			 * 
+			 * 	当以构造函数形式调用时，他所创建的对象中都有一个隐含的属性指向改构造函数的原型对象
+			 * 
+			 *  原型对象相当于一个公共的区域，所有同一个类的实例都可以访问这个原型对象
+			 * 
+			 * 	我们可以将对象中的公共的属性统一设置到原型对象中
+			 * 
+			 * 	当我们访问一个对象的属性或者方法时，他会先在对象自身中寻找,如果有则直接使用,没有则会去原型对象中寻找
+			 * 	
+			 * */
+			function Fun(){
+			}
+			//向Fun的原型中添加name属性
+			Fun.prototype.name="神仙";
+			//想Fun的原型中添加一个方法
+			Fun.prototype.sayHello=function(){
+				alert("我叫"+this.name);
+			}
+			
+			var obj = new Fun();
+			obj.name="孙悟空";
+			obj.sayHello();
+			console.log(obj.name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

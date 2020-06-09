@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var but=document.getElementById("but");
+				but.onclick=function(){
+					var tr=document.createElement("tr");
+					var td1=document.createElement("td");
+					var td2=document.createElement("td");
+					var td3=document.createElement("td");
+					var del=document.createTextNode("删除");
+					var bt=document.createElement("button");
+					td1.style.width="100px";
+					//td1.style.height="100px";
+					//tr.style.height="200px";
+					td2.style.width="100px";
+					td3.style.width="100px";
+					var tab=document.getElementById("table");
+					bt.appendChild(del);
+					td3.appendChild(bt);
+					tr.appendChild(td1);
+					tr.appendChild(td2);
+					tr.appendChild(td3);
+					tab.appendChild(tr);
+					bt.onclick=function(){
+						tab.removeChild(tr);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="but">添加</button>
+		<table border="1" id="table" style="width: 300px;">
+		</table>
+	</body>
+</html>

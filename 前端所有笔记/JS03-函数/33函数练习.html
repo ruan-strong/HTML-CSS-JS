@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*定义函数，判断一个函数是奇数还是偶数, 是偶数返回true，反之返回false*/
+			function isEven(num){
+				if(num%2==0){
+					return true;
+				}else{
+					return false;
+				}
+			}
+			var flag = isEven(4);
+			console.log(flag);
+			
+			/*
+			 
+			 * 某个公司采用公用电话传递数据，数据是四位的整数，在传递过程中是加密的，
+				加密规则如下：每位数字都加上5,然后用除以10的余数代替该数字，再将第一位和第四位交换，
+				第二位和第三位交换，请编写一个函数，传入原文，输出密文
+			 * */
+//			function getCode(num){
+//				var arr = [];
+//				for (var i = 0; i < 4; i++) {
+//					arr[i]=num%10
+//					arr[i] = arr[i]+5;
+//					arr[i] = arr[i]%10;
+//					num = parseInt(num/10);
+//				}
+//				return arr.join("");
+//			}
+//			alert(getCode(1234));
+			
+			/*通过函数创建表格,参数是行和列*/
+			 var row= Number(prompt("请输入行"));
+			 var col= Number(prompt("请输入列"));
+			function start(row,col){
+				var str = "<table border='1px' width='200px' height='200px'>";
+				for (var i = 0; i < row; i++) {
+					str+="<tr>"; //"<table>"+<tr>"
+					for (var j = 0; j < col; j++) {
+						str+="<td></td>";
+					}
+					str+="</tr>"
+				}
+				str+="</table>";
+				document.write(str);
+			}
+			start(row,col);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

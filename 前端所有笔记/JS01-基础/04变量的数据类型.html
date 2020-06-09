@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*变量类型
+			 
+			 * 	string: 取值范围:只要是在“”|''里的值 都可以是string类型的变量
+			 * 	number:	取值范围: 数字(包含浮点型数字)
+			 * 	boolean：取值范围：false|true;
+			 * 	null: 取值范围:null, 当用typeof操作符检测数据类型时,返回Object
+			 *  undefined: 声明但没有赋值
+			 * */
+			/*
+			 
+			 * 	typeof操作符:
+			 * 			用来检测变量的数据类型
+			 * 	语法:   typeof 变量   
+			 * 		返回值: 数据类型
+			 * */
+			var name= "李四";
+			console.log(typeof name);
+			
+			var age = 18;
+			console.log(typeof age);
+			
+			var sex =false;
+			console.log(typeof sex);
+			var hobby = null;/*空*/
+			var hobby2 = "";/*空串*/
+			console.log(typeof hobby);
+			console.log(typeof hobby2);
+			
+			var height;
+//			height=18;
+			console.log(typeof height);
+			
+			var str= '小明说:"今天天很好"';
+			alert(str);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

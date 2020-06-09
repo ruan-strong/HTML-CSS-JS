@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		/*浮动坍塌的形成
+		 
+		 * 		父类没有高度，子类有高度
+		 * 		当子类开启浮动时,则脱离标准文档输出流
+		 * 		此时两个元素的父子关系清除，则原父类高度消失，出现浮动坍塌现象
+		 * */
+			#box1{
+				width: 100%;
+				background-color: red;
+				border-color: red;
+				border-width: 5px;
+				border-style: solid;
+				/*height: 200px;*//*解决方案1：为父类添加一个合适的高度*/
+				 /*clear: both;*/
+				overflow: hidden;/*解决方案2：外墙法: 为坍塌的元素添加*/
+			}
+			#box2{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				float: left;
+			  	
+			}
+			/*#box3{
+				clear: both; /*解决方案3:内墙法:在开启浮动的元素后添加一个空的块级元素并且清除浮动*/
+			}*/
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			<div id="box2">
+				
+			</div>
+			<div id="box3">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>

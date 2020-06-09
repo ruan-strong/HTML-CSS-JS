@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				height: 200px;
+				width: 200px;
+				background-color: aqua;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box = document.getElementById("box1");
+				document.onkeydown=function(event){
+					event=event||window.event;
+//					box.innerHTML=event.keyCode;//获取键值
+					if(event.keyCode==39){//右
+						box.style.left= box.offsetLeft+10+"px";
+					}
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			
+		</div>
+	</body>
+</html>

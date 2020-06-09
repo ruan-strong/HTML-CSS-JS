@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body,div,ul,li{margin:0;padding:0;}
+			ul{list-style-type:none;}
+			body{background:#000;text-align:center;font:12px/20px Arial;}
+			#box{position:relative;width:492px;height:172px;background:#fff;border-radius:5px;border:8px solid #fff;margin:10px auto;cursor:pointer;}
+			#box .list{position:relative;width:490px;height:170px;overflow:hidden;}
+			#box .list ul{position:absolute;top:0;left:0;}
+			#box .list li{width:490px;height:170px;overflow:hidden;}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box = document.getElementById("box");
+				var boxlist = document.getElementsByClassName("list");
+				var ul = document.getElementsByTagName("ul")[0];
+				var ptop = 0;
+//				ul.style.top="-680px";
+				lunbo = setInterval(function() {
+					if(ul.style.top=="-680px"){
+						ul.style.top=="-680px"
+						ul.style.transition = "top 0s";
+						ul.style.top= "-0px";
+						ptop = 0;
+					}else{
+						ul.style.top=ptop;
+						ul.style.transition = "top 0.5s";
+						ul.style.top=ptop-170+"px";
+						ptop=ptop-170;
+					}},1000);
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			    <div class="list">
+			        <ul>
+			            <li><img src="img/01.jpg" width="490" height="170" /></li>
+			            <li><img src="img/02.jpg" width="490" height="170" /></li>
+			            <li><img src="img/03.jpg" width="490" height="170" /></li>
+			            <li><img src="img/04.jpg" width="490" height="170" /></li>
+			            <li><img src="img/05.jpg" width="490" height="170" /></li>
+			        </ul>
+			    </div>
+		</div>
+	</body>
+</html>

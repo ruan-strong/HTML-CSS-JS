@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		var romNum = Math.ceil(Math.random()*100);
+		var flag = true;
+		while(flag){
+			var num = +prompt("请输入数字:")
+			if(romNum<num){
+				alert("宁猜大了！");
+			}else if(romNum>num){
+				alert("宁猜小了！");
+			}else if(romNum==num){
+				alert("宁猜中了了！");
+				flag=false;
+			}
+		}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

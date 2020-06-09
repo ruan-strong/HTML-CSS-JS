@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//onload事件:会在整个页面加载完成之后才触发
+			window.onload=function(){
+				//通过ID找到button对象
+				var btn1 = document.getElementById("btn1");
+				//绑定一个单击事件
+				//像这种为单击事件绑定的函数,我们称之为单击响应函数
+				btn1.onclick=function(){
+					alert("我已经被点了");
+				}
+			}
+			/*事件
+			 
+			 * 事件就是用户和浏览器之间的交互行为
+			 * 
+			 * 	比如  点击事件、鼠标移动时间、鼠标移出时间、鼠标移入事件、改变时间、键盘事件、鼠标滚轮事件
+			 * */
+		</script>
+	</head>
+	<body>
+		<button id="btn1">点我</button>
+	</body>
+</html>

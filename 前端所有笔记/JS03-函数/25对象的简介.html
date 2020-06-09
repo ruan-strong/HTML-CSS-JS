@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		/*JS的数据类型
+		 
+		 *    string 字符串
+		 * 	  number 数字
+		 * 	  boolean 布尔值
+		 * 	  null 空
+		 *    undefind 未定义
+		 * 
+		 *   以上这五种数据类型【基本数据类型】
+		 * 
+		 *   以后我们看到的值只要不是这五种基本数据类型，全是【引用类型】
+		 * 
+		 *   Object  -引用类型    Object对象
+		 *  
+		 *   基本数据类型 都是单一的  值和值之间没有任何联系
+		 *   如果使用基本数据类型的数据,我们创建的变量多事独立的，不能成为一个整体
+		 * */
+		var name="孙悟空"
+		var age = 500;
+		var sex = "男";
+		
+		/*
+		 
+		 *  对象属于一个复合的数据类型，在一个对象中可以保存多个不同数据类型的属性
+		 * 
+		 * */
+		
+		/*var obj = {name:"孙悟空",age:500,sex:"男"};*/
+		
+		/*对象的分类
+		 
+		 *   1.内建对象
+		 * 		-ES标准中定义的对象,在任何ES的实现中都可以使用
+		 * 			Function Math String Number Boolean Object.....
+		 * 
+		 * 
+		 * 	2.宿主对象
+		 * 		-由JS的运行环境提供的对象，主要由浏览器提供的对象
+		 * 			BOM DOM console  doucument...
+		 * 
+		 * 	3.自定义对象
+		 * 		-由开发人员自己创建的对象
+		 * 		     【重点学习！】
+		 * 
+		 * */
+			/*创建对象
+			 
+			 * 可以使用new 关键字刁调用函数创建  ，称之为 构造函数
+			 *			构造函数是专门用来创建对象的函数 
+			 *			语法:   var 对象名  =  new  Object();
+			 * 			使用typeof 操作符检查一个对象 返回的是Object
+			 * */
+			//创建一个人对象
+			var person = new Object();
+			/*在对象中保存的值称之为属性
+			 
+			 * 语法: 对象名.属性名=属性值；
+			 * 
+			 * */
+			//想person中添加一个name属性
+			person.name="孙悟空";
+			person.age=500;
+			person.sex="男";
+			console.log(person);
+			console.log(typeof person);
+			
+			/*读取对象中的属性
+			 
+			 *  语法: 对象.属性名
+			 * 
+			 * */
+			console.log(person.name);
+			/*修改对象中的属性值
+			 
+			 * 语法: 对象名.属性名=属性值；
+			 * */
+			person.name="猪八戒";
+			console.log(person);
+			console.log(typeof person);
+			
+			/*删除对象中的属性
+			 
+			 *  语法; delete 对象.属性名
+			 * */
+			delete person.age;
+			console.log(person);
+			console.log(typeof person);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

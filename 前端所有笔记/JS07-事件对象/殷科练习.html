@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				height: 300px;
+				width: 300px;
+				background-color: aqua;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+			var d=50,t=0;
+			var box=document.getElementById("box1");
+			var time=setInterval(fun,100);
+			function fun(){
+				t=t+1;
+				if(t<=10){
+					box.style.left=box.offsetLeft+d+"px";
+				}else if(t<=20){
+					d=-50;
+					box.style.left=box.offsetLeft+d+"px";
+				}else if(t<=30){
+					d=50;
+					box.style.height=box.offsetHeight+d+"px";
+					box.style.width=box.offsetWidth+d+"px";
+				}else if(t<=40){d=-50;
+					box.style.height=box.offsetHeight+d+"px";
+					box.style.width=box.offsetWidth+d+"px";
+				}else if(t>40){
+					t=0;d=50;
+					
+				}
+				
+			}
+			
+			
+				
+			}
+		
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="box1">
+			
+		</div>
+	</body>
+</html>

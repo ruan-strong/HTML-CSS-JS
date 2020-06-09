@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				height: 500px;
+				width: 500px;
+				background-color: aqua;
+			}
+			#box2{
+				height: 300px;
+				width: 300px;
+				background-color: yellowgreen;
+			}
+			#box3{
+				height: 200px;
+				width: 200px;
+				background-color: magenta;
+			}
+		</style>
+		<script type="text/javascript">
+			/*事件的冒泡
+			 
+			 * 	所谓的事件冒泡就是事件的向上传导,当后代元素的时间被触发时,其祖先元素的相同时间也会被触发
+			 * 	
+			 * 
+			 * */
+			window.onload=function(){
+				var box1= document.getElementById("box1");
+				var box2= document.getElementById("box2");
+				var box3= document.getElementById("box3");
+				
+				box1.onclick=function(event){
+					event = event||window.event;
+					alert("我是box1");
+				}
+				box2.onclick=function(event){
+					event = event||window.event;
+					
+					alert("我是box2");
+				}
+				box3.onclick=function(event){
+					event = event||window.event;
+					//可以将时间对象的cancelBubble设置为true,即可取消冒泡
+					event.cancelBubble=true;
+					alert("我是box3");
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box1">
+			<div id="box2">
+				<div id="box3">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

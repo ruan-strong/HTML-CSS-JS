@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 
+			 * 
+				需求描述：假设一个简单的ATM机的取款过程为：
+				  *  首先提示用户输入密码（password），假设默认密码为111111最多只能输入3次，
+				  *  超过3次则提示用户“密码错误，请取卡”，结束交易。
+				 
+				  如果用户密码正确，再提示用户选择金额（amount），
+				  “请输入0到6中任意数字选择对应钱数：0?手动输入金额,1?100元, 2?300元,
+				   3?500元, 4?1000元, 5?3000元, 6?5000元”。
+				 
+				  输入数字如果错误，提示“输入错误，是否继续 Y/N”，选择Y重新提示输入钱数编号，选择N提示“输入错误，请取卡！”。
+				 
+				  选择数字为1到6，打印对应钱数， 并提示“是否继续 Y/N”。
+				 
+				  选择数字0，ATM机只能输出100元纸币，
+				 
+				  自定义钱数要求最低为100元，最高为1000元。
+				 
+				  如果用户输入的金额符合上述要求，
+				  则打印输出用户取的钱数，并提示“取款完成，是否继续Y/N”；否则输出一句话“金额错误，
+				  是否继续 Y/N”,如果用户输入Y，提示用户重新选择取款金额，如果用户输入 N，
+				  打印“交易取消，请取卡！”
+			 * */
+			var times=0;
+			while(times<3){
+				var pwd = prompt("请输入密码:");
+				if(pwd=="111111"){//密码正确的情况下
+					var flag=true;
+					var item= 0;
+					while(flag){
+						var mamu = +prompt("请输入0到6中任意数字选择对应钱数:\n0.手动输入金额\n1.100元\n2.300元\n3.500元\n4.1000元\n5.3000元\n6.5000元");
+						switch (mamu){
+							case 0: item = autoAmount();
+							break;
+							case 1:alert("成功取出100元");
+							break;
+							case 2:alert("成功取出300元");
+							break;
+							case 3:alert("成功取出500元");
+							break;
+							case 4:alert("成功取出1000元");
+							break;
+							case 5:alert("成功取出3000元");
+							break;
+							case 6:alert("成功取出5000元");
+								break;
+							default:
+								flag = confirm("输入错误，是否继续 Y/N");
+								break;
+						}
+						if(item==1){
+							alert("交易完成，请取卡！");
+							break;
+						}
+					}
+					if(flag==false){
+						alert("输入错误，请取卡！");
+						break;
+					}
+					
+				}else{//密码错误的情况下
+					if(times==2){
+						alert("密码错误，请取卡");
+						break;
+					}else{
+						alert("密码错误,请重新输入")
+					}
+					times++;
+				}
+			}
+			function autoAmount(){
+				var item =0;
+				var flag = true
+				while(flag){
+					var amount = +prompt("请输入金额");
+					if(amount%100!=0&&amount<100||amount>1000){
+						alert("请重新输入");
+					}else{
+						alert("宁已成功取出"+amount+"元");
+						flag = confirm("取款完成，是否继续Y/N");
+						if(flag==false){
+							item=1;
+						}
+					}
+				}
+				return item;
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

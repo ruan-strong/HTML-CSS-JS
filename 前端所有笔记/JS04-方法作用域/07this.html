@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*浏览器在调用函数时，每次都会向函数内部传递一个隐含的参数
+			 
+			 *  这个隐含的参数就是 this
+			 * 
+			 * 	this指向的是一个【对象】
+			 * 	这个【对象】我们称为函数执行的上下文
+			 * 
+			 * 	1.一函数形式调用时,this永远都指向window对象
+			 * 	2.以方法形式调用时,this就是调用方法的那个对象
+			 * */
+			function fun(){
+				console.log(this);
+			}
+			fun();
+			
+			var a=1
+			function fun1(){
+				console.log(this.a);
+			}
+			fun1();
+			
+			var obj  ={
+				name:"孙悟空",
+				age:500,
+				sex:"男",
+				sayHello:fun3
+			}
+			function fun3(){
+				console.log(this.name);//obj.name
+			}
+			obj.sayHello();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

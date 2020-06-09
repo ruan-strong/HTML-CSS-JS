@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(){
+				var op1 = document.getElementById("op1");
+				var op2 = document.getElementById("op2");
+				var op3 = document.getElementById("op3");
+				var longs = op1.value;
+				var width = op2.value;
+				var areas = longs*width;
+				op3.value=areas;
+			}
+		</script>
+	</head>
+	<body>
+		长：<input type="text" id="op1"  value=""/>
+		宽：<input type="text" id="op2"  value=""/>
+		面积：<input type="text" id="op3"  value=""/>
+		<input type="button" id="" value="计算" onclick="fun()"/>
+	</body>
+</html>

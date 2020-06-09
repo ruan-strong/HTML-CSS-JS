@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*检查一个字符串中是否含有   .
+			 	
+			 *	. 表示任意字符
+			 * 	
+			 * 	
+			 * */
+			var reg = /\./;
+			console.log(reg.test("anihao"));
+			
+			/*\w
+			 *	任意字母、数字、_  相当于 [A-z0-9_]
+			 * 
+			 * 
+			 */
+			
+			/*\W
+			 
+			 * 	
+			 *  除了任意字母、数字、_  相当于 [^A-z0-9_]
+			 * 
+			 * */
+			
+			/*\d
+			 
+			 * 		任意数字 [0-9]
+			 * 
+			 * */
+			/*\D
+			 
+			 * 		除了任意数字 [^0-9]
+			 * 
+			 * */
+			
+			/*\s
+			 
+			 *		空格
+			 * 
+			 * 
+			 * */
+			/*\S
+			 
+			 *		除了空格
+			 * 
+			 * 
+			 * */
+			reg = /\S/;
+			console.log(reg.test(" "));
+			
+			var str2= "     hello    ";
+			console.log(str2.replace(/\s/g,""));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

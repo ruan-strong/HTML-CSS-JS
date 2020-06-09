@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*函数作用域(局部作用域)
+			 
+			 * 调用函数时创建的一个作用域叫函数作用域
+			 * 生命周期:
+			 * 	在函数执行时创建,执行完毕后销毁
+			 * 	
+			 * 	每调用一次函数就会创建一个函数作用域,他们是相互独立的
+			 * 
+			 *  函数作用域可以访问全局作用域中的变量,反之全局作用域不能访问函数作用域中农的变量
+			 * 
+			 * 	在函数作用域中操作一个变量时,它会在自身作用域中先寻找,如果没有则向上一级作用域中寻找
+			 * 
+			 * 在同一个作用域中的变量不要重名
+			 * 
+			 * 		在函数作用域中访问全局变量 可以使用window对象
+			 * */
+			
+			var a = 123;
+//			var a = 25;
+			function fun(){
+				var b = 147;
+				var a = 258;
+				console.log(a);
+				console.log(window.a);
+				function fun2(){
+					var a = 369;
+					console.log(a);
+				}
+			}
+			fun();
+//			console.log(b);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

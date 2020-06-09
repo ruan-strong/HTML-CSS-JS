@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*枚举对象中的属性
+			 
+			 *  使用 for....in语句
+			 * 
+			 * 	语法:  for(var 变量 in 对象){}
+			 * 
+			 * 	for in  语句在对象中有几个属性,循环体就循环几次
+			 * 			每次执行时会将对象中的一个属性的名字赋值给变量
+			 * */
+			var person = {
+						name:"zhangsan",
+						"!@#$$":"花里胡哨",
+						age:500,
+						sex:"男"
+						};
+			for(var str in person){
+				console.log("属性名:"+str);
+				console.log("属性值:"+person[str]);
+			}
+			
+			
+			
+			/*遍历数组*/
+			var arr = [0,1,2,3,4,5,6];
+			for (var i = 0; i < arr.length; i++) {
+				console.log(arr[i]);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			/*1，打印1-100之间所有奇数之和
+			 * */
+//			var sum=0;
+//			for (var i = 1; i <=100; i++) {
+//				if(i%2!=0){
+//					sum+=i;
+//				}
+//			}
+//			alert(sum);
+			/*2.判断是否为质数*/
+//			var num = +prompt("请输入一个数:");
+//			if(num<=1||isNaN(num)){
+//				alert("请正确输入");
+//			}else{
+//				var flag = true;
+//				for (var i = 2; i < num; i++) {
+//					if(num%i==0){
+//						flag =false;
+//					}
+//				}
+//				if(flag){
+//					alert("是质数");
+//				}
+//			}
+			/*3.输出1到100所有质数*/
+//			var flag = 0;
+//			for (var i = 2; i <= 100; i++) {
+//			 	for (var j = 2; j < i; j++) {
+//			 		if(i%j==0){
+//			 			flag++;
+//			 			break;
+//			 		}
+//			 	}
+//			 	if(flag==0){
+//			 		document.write(i+"<br/>");
+//			 	}else{
+//			 		flag=0;
+//			 	}
+//			}
+			/*4.有一张0.0001米的纸，对折多少次可以达到珠穆朗玛峰的高度8848；*/
+//			var h =0.0001;
+//			var time=0;
+//			for (;;) {//死循环
+//				h*=2;
+//				time++;
+//				if(h>8848){
+//					break;
+//				}
+//			
+//			}
+//			alert(time);
+			/*5.while循环 九九乘法表*/
+//			var i=1;
+//			while(i<=9){
+//				var j = 1;
+//				while(j<=i){
+//					document.write(j+"X"+i+"="+(j*i)+"&emsp;");
+//					j++
+//				}
+//				i++;
+//				document.write("<br/>");
+//			}
+			/*6.while循环三角形*/
+//			var i=1;
+//			while(i<=9){
+//				var j = 1;
+//				while(j<=i){
+//					document.write("*");
+//					j++
+//				}
+//				i++;
+//				document.write("<br/>");
+//			}
+		var time=0
+		var flag = true;
+		while(flag){
+				var pwd = +prompt("请输入密码:");
+			if(pwd!=11){
+				time++;
+			}
+			if(time>=3){
+				flag=false;
+			}
+		}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

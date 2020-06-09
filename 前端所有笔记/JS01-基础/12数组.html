@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*数组
+			 
+			 * 		数组就是对象
+			 * 			功能和普通的变量类似。
+			 * 			不同的是普通的变量是使用字符串作为属性名  而数组 使用数字来作为索引操作元素(值)
+			 * */
+			/*创建一个数组
+			 
+			 *	语法: var 数组名 = new Array();
+			 * 
+			 * 	添加元素语法:  数组名[索引] = 值;
+			 * 	获取元素语法:  数组名[索引];
+			 * */
+			
+			var arr = new Array();
+//			arr[0] = "zhangsan";
+//			arr[1] = 18;
+//			arr[2] = "男";
+			console.log("24"+arr.length);
+			arr[arr.length]="张三";
+			console.log("26"+arr.length);
+			arr[arr.length]=18;
+			arr[arr.length]="男";
+			console.log(arr);
+			
+			console.log("数组的长度"+arr.length);
+			console.log(typeof arr.length);
+			
+			arr[0]="李四"
+			console.log(arr);
+			console.log("索引为2得元素："+arr[2])
+			
+			
+			var arr1 = new Array(10);
+			console.log(arr1.length);
+			
+			var arr2 = new Array("zhangsan",18,"男");
+			console.log(arr2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
